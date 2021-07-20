@@ -1,0 +1,33 @@
+/* cargar colores */
+/* $colorPrincipal = #ff6764; */
+
+:root {
+    --logo-color :#ffd000;
+    --detalles-color :  #ff6764;
+}
+.imagenFondo{
+    background-image: url(/img/fondo.jpg);
+    background-size: cover;
+
+}
+body{
+    max-width: 1677px;
+    height: auto;
+}
+header{
+    width: 50%;
+
+}
+header #logo{
+    width: 30%;
+    height: auto;
+}
+header .carruselFrases{
+    width: 50%;
+    margin: 10px;
+}
+main{
+    width: 50%;
+}
+
+
