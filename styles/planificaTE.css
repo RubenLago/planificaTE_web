@@ -1,14 +1,18 @@
 /* cargar colores */
 /* $colorPrincipal = #ff6764; */
 
+/* 
+carrusel
+ */
+
 :root {
     --logo-color :#ffd000;
     --detalles-color :  #ff6764;
 }
-.imagenFondo{
-    background-image: url(/img/fondo.jpg);
-    background-size: cover;
-
+html{
+    background-image:  url(../img/fondo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 body{
     max-width: 1677px;
@@ -16,18 +20,38 @@ body{
 }
 header{
     width: 50%;
+    float: left;
 
 }
 header #logo{
-    width: 30%;
+    width: 40%;
     height: auto;
+    margin: 0 auto;
 }
 header .carruselFrases{
     width: 50%;
-    margin: 10px;
+    margin: 0 auto;
+    padding: 10px 0;
+
 }
 main{
+    display: flex;
+    flex-wrap: wrap;
     width: 50%;
 }
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
+
+@media (max-width: 768px ){
+    body header{
+       width: 100%;
+    }
+    main{
+       width: 100%;
+    }
+}
 
