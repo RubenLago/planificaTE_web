@@ -4,19 +4,21 @@
 /* 
 carrusel
  */
+ /* font font-family: 'Indie Flower', cursive; */
+
 
 :root {
     --logo-color :#ffd000;
     --detalles-color :  #ff6764;
 }
-html{
-    background-image:  url(../img/fondo.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
+
 body{
     max-width: 1677px;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
+    background-image:  url(../img/fondo.png);
+    background-size: cover;
+  
 }
 header{
     width: 50%;
@@ -24,12 +26,12 @@ header{
 
 }
 header #logo{
-    width: 40%;
+    width: 60%;
     height: auto;
     margin: 0 auto;
 }
 header .carruselFrases{
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     padding: 10px 0;
 
@@ -38,6 +40,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     width: 50%;
+    padding-top: 10px;
 }
 img{
     width: 100%;
@@ -45,7 +48,61 @@ img{
     display: block;
 }
 
+/* section tareas */
 
+
+
+body main{
+display: flex;
+flex-wrap: wrap;
+width: calc(50% - 80px);
+padding: 20px;
+background-color: rgb(65, 48, 48);
+margin-top: 80px;
+margin-right: 40px;
+height: auto;
+border-top: 20px solid var(--detalles-color);
+border-bottom: 20px solid var(--detalles-color);
+border-radius: 10px;
+}
+
+main#bloqueTareas section#formSuperior{
+  width: 100%;
+}
+main#bloqueTareas section#formSuperior input.inputTarea{
+    width: 50%;
+    text-align: center;
+    color: var(--detalles-color);
+}
+main#bloqueTareas section#formInferior{
+    width: 100%;
+  }
+
+section#listaTareas{
+    border-left: 3px solid var(--detalles-color);
+    margin-left: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+section#listaTareas ul li{
+border-bottom: 1px solid var(--detalles-color);
+border-style: dashed;
+padding: 10px;
+color: white;
+font-family: 'Indie Flower', cursive;
+}
+section#listaTareas ul li i{
+    padding-right: 10px;
+}
+section#listaTareas ul li i{
+    padding-right: 10px;
+    color: red;
+}
+
+
+
+
+/* media 768 */
 @media (max-width: 768px ){
     body header{
        width: 100%;
