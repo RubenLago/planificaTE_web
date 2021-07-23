@@ -98,6 +98,11 @@ section#listaTareas ul li i{
     padding-right: 10px;
     color: red;
 }
+section#listaTareas ul li:hover{
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
 
 
 
