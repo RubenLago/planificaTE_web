@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 
 
 
@@ -30,7 +33,8 @@
     <main id="bloqueTareas">
         <section id="formSuperior">
             <form action="" class="formulario">
-                <input class="inputTarea" type="text" id="escribirTarea" placeholder="Añade una nueva tarea">
+                <input class="error" class="inputTarea" type="text" id="escribirTarea"
+                    placeholder="Añade una nueva tarea">
                 <select name="prioridad" id="escribirPrioridad">
                     <option value="select">Prioridad</option>
                     <option value="teCaliente">Té caliente</option>
@@ -50,7 +54,7 @@
             <input type="search" name="buscar" placeholder="buscar tarea...">
         </section>
         <section id="listaTareas">
-            <ul>
+            <ul id="tareasJs">
                 <li><i class="fas fa-mug-hot"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quidem
                     quae laboriosam rerum dolore,
                     maxime quibusdam vitae asperiores neque est.</li>
@@ -74,7 +78,33 @@
 
     </main>
 
+    <!-- footer con Bootstrap -->
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-" href="https://www.linkedin.com/in/rubenlago/"
+                    role="button"><i class="fab fa-linkedin-in"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/RubenLago" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color:#ff6764;">
+                © 2021 Copyright:
+                <a class="text-white" href="https://iddigitalschool.com/bootcamps/">Tomato SL</a>
+            </div>
+            <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
     <script src="jsArchivos/carrusel.js"></script>
+    <script src="jsArchivos/main.js"></script>
 
 </body>
 
