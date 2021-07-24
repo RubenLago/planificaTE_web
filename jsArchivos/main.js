@@ -1,8 +1,32 @@
 /* variables de los cinco botones dinámicos */
 let listaTareas = document.querySelector('#tareasJs'); //ul
 let inputEscribirTarea = document.querySelector('#escribirTarea');
-/* capturar prioridad x hacer */
+let btnPrioridad = document.querySelector('#escribirPrioridad');
 let btnAgregarTarea = document.querySelector('#btnAgregar');
+
+/* array de tareas */
+let tareas = new Array(
+    {
+        'id': 1,
+        'titulo': 'contestar a los correos electrónicos ',
+        'prioridad': 'alta'
+    },
+    {
+        'id': 2,
+        'titulo': 'hacer reservas para las vacaciones de Septiembre',
+        'prioridad': 'media'
+    },
+    {
+        'id': 3,
+        'titulo': 'cambiar cita médica del jueves 29',
+        'prioridad': 'alta'
+    },
+    {
+        'id': 4,
+        'titulo': 'llamar al seguro para mantenimiento calefacción',
+        'prioridad': 'alta'
+    },
+)
 
 //Eventos
 btnAgregarTarea.addEventListener('click', agregarTarea);
@@ -11,16 +35,33 @@ inputEscribirTarea.addEventListener('click', comprobarTarea);
 
 //Funciones
 function agregarTarea() {
-    let tarea = inputEscribirTarea.value;
-    /* alert(tarea)  ok devuelve valor*/
-    let nuevaTarea = document.createElement('li');
-    let iconoTe = document.createElement('i'); //pensar como colocar dentro del li el icono
-    let contenido = document.createTextNode(tarea);
+    let contadorId = 0;
+    if (inputEscribirTarea !== "" && btnPrioridad !== "") {
+        tareas = {
+            'id': contadorId,
+            'titulo': inputEscribirTarea.value,
+            'prioridad': btnPrioridad.value,
+        }
+        /* mejorar este push */
 
-    if (tarea === "") {
+        let nuevaTarea = document.createElement('li');
+        let iconoTe = document.createElement('i'); //pensar como colocar dentro del li el icono
+        let contenido = document.createTextNode(tareas.titulo);
+        tareas.push
+        contadorId++
+    } else {
         inputEscribirTarea.setAttribute("placeholder", "Debes agregar una tarea");
         inputEscribirTarea.setAttribute('style', 'color: red'); //quiero que no afecta al color de la tarea,solo como alerta >> solucionado con la funcion comprobar tarea .
     }
+
+    /* alert(tarea)  ok devuelve valor*/
+
+
+    /*ya usada
+     if (tarea === "") {
+        inputEscribirTarea.setAttribute("placeholder", "Debes agregar una tarea");
+        inputEscribirTarea.setAttribute('style', 'color: red'); //quiero que no afecta al color de la tarea,solo como alerta >> solucionado con la funcion comprobar tarea .
+    } */
     nuevaTarea.appendChild(contenido);
     listaTareas.appendChild(nuevaTarea);
 
@@ -38,7 +79,12 @@ function agregarTarea() {
         })
     }
 
+}
 
+function eliminarTarea() {
+    let valorTarea = this.textContent
+    alert("¿Quieres borrar " + valorTarea + "?")
+    this.parentNode.removeChild(this)
 }
 
 
@@ -52,12 +98,9 @@ function comprobarTarea() {
 }
 
 
-function eliminarTarea() {
-    let valorTarea = this.textContent
-    alert("¿Quieres borrar " + valorTarea + "?")
-    this.parentNode.removeChild(this)
-}
+function pintarTarea() {
 
+}
 
 
 /* borrar los  li */

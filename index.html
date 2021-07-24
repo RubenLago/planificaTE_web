@@ -8,6 +8,7 @@
     <title>PlanificaTE</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/planificaTE.css">
+    <script src="jsArchivos/claseTarea.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +37,8 @@
                 <input class="error" class="inputTarea" type="text" id="escribirTarea"
                     placeholder="Añade una nueva tarea">
                 <select name="prioridad" id="escribirPrioridad">
-                    <option value="select">Prioridad</option>
+                    <option value="">Prioridad</option>
+                    <!-- value vacío para poder hacer una alerta -->
                     <option value="teCaliente">Té caliente</option>
                     <option value="teTemplado">Té templado</option>
                     <option value="teFrio">Té frío</option>
@@ -55,22 +57,11 @@
         </section>
         <section id="listaTareas">
             <ul id="tareasJs">
-                <li><i class="fas fa-mug-hot"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quidem
+                <!-- <li><i class="fas fa-mug-hot"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quidem
                     quae laboriosam rerum dolore,
                     maxime quibusdam vitae asperiores neque est.</li>
                 <li><i class="fas fa-mug-hot"></i>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                <li><i class="fas fa-mug-hot"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                    pariatur, distinctio repellat officiis
-                    obcaecati similique sint minima nam quae quod voluptatum iusto atque reprehenderit libero, maiores
-                    fugit
-                    optio commodi sit corporis, dolore minus? Vel?</li>
-                <li><i class="fas fa-mug-hot"></i>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus,
-                    voluptatum!</li>
-                <li><i class="fas fa-mug-hot"></i>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Necessitatibus nostrum ducimus
-                    perspiciatis
-                    saepe quod, nemo hic tempore, ipsa laboriosam enim nesciunt tenetur incidunt earum sequi animi velit
-                    voluptatibus, odit eveniet dolores numquam?</li>
+ -->
             </ul>
 
         </section>
@@ -104,7 +95,7 @@
     <!-- Footer -->
 
     <script src="jsArchivos/carrusel.js"></script>
-    <script src="jsArchivos/main.js"></script>
+    <script src="jsArchivos/main_.js"></script>
 
 </body>
 
