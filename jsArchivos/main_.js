@@ -5,15 +5,34 @@ let btnPrioridad = document.querySelector('#escribirPrioridad');
 let btnAgregarTarea = document.querySelector('#btnAgregar');
 
 
-const tareas = new Array(
-    new Tarea('contestar a los correos electrónicos del trabajo y escribe a Fernando para planificar la semana', 'alta'),
-    new Tarea('hacer reservas para las vacaciones de Septiembre, mirar camping y coche de alquiler', 'media'),
-    new Tarea('cambiar cita médica del jueves con el traumatólog', 'media'),
-    new Tarea('llamar al seguro para mantenimiento calefacción', 'alta'),
-)
+/* 
+btnAgregarTarea.addEventListener('click', () => {
+    if (inputEscribirTarea.value !== "" && btnPrioridad.value !== "") //probar con .value
+        new Tarea = {
+            inputEscribirTarea.value, //con super.
+            btnPrioridad.value,
+        }
+    // Tarea.push(new Tarea) //NO TIENE SENTIDO
+    //NO FUNCIONA
+
+}) */
+function agregarTarea() {
+    btnAgregarTarea.addEventListener('clic', agregarTarea)
+    if (inputEscribirTarea !== "" && btnPrioridad !== "") {
+
+    }
+}
+
+
 
 function pintarTarea(pLista) {
     pLista.forEach(element => element.mostrarTarea(listaTareas));
 }
 
 pintarTarea(tareas)
+agregarTarea(tareas)
+
+/*
+//Eventos
+btnAgregarTarea.addEventListener('click', pintarTarea);
+inputEscribirTarea.addEventListener('click', comprobarTarea); */

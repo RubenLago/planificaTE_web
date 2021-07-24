@@ -1,32 +1,5 @@
-/* variables de los cinco botones dinámicos */
-let listaTareas = document.querySelector('#tareasJs'); //ul
-let inputEscribirTarea = document.querySelector('#escribirTarea');
-let btnPrioridad = document.querySelector('#escribirPrioridad');
-let btnAgregarTarea = document.querySelector('#btnAgregar');
 
-/* array de tareas */
-let tareas = new Array(
-    {
-        'id': 1,
-        'titulo': 'contestar a los correos electrónicos ',
-        'prioridad': 'alta'
-    },
-    {
-        'id': 2,
-        'titulo': 'hacer reservas para las vacaciones de Septiembre',
-        'prioridad': 'media'
-    },
-    {
-        'id': 3,
-        'titulo': 'cambiar cita médica del jueves 29',
-        'prioridad': 'alta'
-    },
-    {
-        'id': 4,
-        'titulo': 'llamar al seguro para mantenimiento calefacción',
-        'prioridad': 'alta'
-    },
-)
+
 
 //Eventos
 btnAgregarTarea.addEventListener('click', agregarTarea);
@@ -38,9 +11,7 @@ function agregarTarea() {
     let contadorId = 0;
     if (inputEscribirTarea !== "" && btnPrioridad !== "") {
         tareas = {
-            'id': contadorId,
-            'titulo': inputEscribirTarea.value,
-            'prioridad': btnPrioridad.value,
+
         }
         /* mejorar este push */
 
