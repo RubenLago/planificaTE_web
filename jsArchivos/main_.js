@@ -1,7 +1,6 @@
 /* variables de los cinco botones dinámicos */
 let listaTareas = document.querySelector('#tareasJs'); //ul
 let inputEscribirTarea = document.querySelector('#escribirTarea');
-let btnPrioridad = document.querySelector('#escribirPrioridad');
 let btnAgregarTarea = document.querySelector('#btnAgregar');
 
 
@@ -16,6 +15,12 @@ btnAgregarTarea.addEventListener('click', () => {
     //NO FUNCIONA
 
 }) */
+
+function pintarTareas(pLista) {
+    pLista.forEach(element => pLista[element.titulo].push)
+
+}
+
 function agregarTarea() {
     btnAgregarTarea.addEventListener('clic', agregarTarea)
     if (inputEscribirTarea !== "" && btnPrioridad !== "") {
@@ -23,13 +28,15 @@ function agregarTarea() {
     }
 }
 
-
-
-function pintarTarea(pLista) {
-    pLista.forEach(element => element.mostrarTarea(listaTareas));
+/* optener el valor del elemento seleccionado del select */
+let listaPrioridades = document.getElementById('#escribirPrioridad');
+let valorPrioridad = listaPrioridades.options[listaPrioridades.selectedIndex].value; //valor de la opcion seleccionada
+switch (valorPrioridad) {
+    //case 1: //acceder a los estilos de i
 }
 
-pintarTarea(tareas)
+
+pintarTareas(tareas)
 agregarTarea(tareas)
 
 /*

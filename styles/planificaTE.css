@@ -131,6 +131,7 @@ border-style: dashed;
 padding: 10px;
 color: white;
 font-family: 'Indie Flower', cursive;
+text-transform: capitalize;
 }
 section#listaTareas ul li i{
     padding-right: 10px;
