@@ -15,9 +15,10 @@ carrusel
 body{
     max-width: 1677px;
     width: 100vw;
-    height:auto;
+    height:100vh;
     background-image:  url(../img/fondo.png);
     background-size: cover;
+
   
 }
 header{
@@ -67,17 +68,34 @@ border-bottom: 20px solid var(--detalles-color);
 border-radius: 10px;
 }
 
+main#bloqueTareas{
+    margin-top: 100px;
+}
 main#bloqueTareas section#formSuperior{
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 main#bloqueTareas section#formSuperior input.inputTarea{
-    width: 50%;
+    width: 100%;
     text-align: center;
     color: var(--detalles-color);
 }
 main#bloqueTareas section#formInferior{
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
+main#bloqueTareas section#formInferior input{
+      width: 20%;
+  }
+main#bloqueTareas section#formInferior select{
+    width: 20%;
+    display: flex;
+   margin: 0 auto;
+   margin-right: 8px;
+   
+}
 
 section#listaTareas{
     border-left: 3px solid var(--detalles-color);
@@ -86,12 +104,34 @@ section#listaTareas{
     margin-top: 20px;
     
 }
+form.formulario{
+    margin: 0 auto;
+}
+form.formulario input {
+    margin: 10px;
+}
+form.formulario input:first-child, form.formulario select {
+    width: 100%;
+    border-radius: 1px 1px;
+    margin: 0 auto;
+    margin-top: 8px;
+    text-align: center;
+}
+form.formulario input:last-child {
+    width: 100%;
+    border-radius: 1px 1px;
+    margin: 0 auto;
+    margin-top: 8px;
+    text-align: center;
+}
+
 section#listaTareas ul li{
 border-bottom: 1px solid var(--detalles-color);
 border-style: dashed;
 padding: 10px;
 color: white;
 font-family: 'Indie Flower', cursive;
+text-transform: capitalize;
 }
 section#listaTareas ul li i{
     padding-right: 10px;
@@ -106,9 +146,14 @@ section#listaTareas ul li:hover{
 }
 
 footer{
+    position: fixed;
     width: 100%;
-    position: absolute;
     bottom: 0;
+    clear: both;
+}
+
+input,select{
+    color: rgb(0, 0, 0);
 }
 
 
@@ -122,6 +167,15 @@ footer{
     }
     main{
        width: 100%;
+    } 
+    main#bloqueTareas{
+        width: 80%;
+        margin: 0 auto;
     }
+    footer{
+        display: none;
+    }
+
+    
 }
 

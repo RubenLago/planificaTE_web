@@ -8,6 +8,9 @@
     <title>PlanificaTE</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/planificaTE.css">
+    <!--   <script src="jsArchivos/claseTarea.js"></script> -->
+    <script src="jsArchivos/datos.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,46 +36,35 @@
     <main id="bloqueTareas">
         <section id="formSuperior">
             <form action="" class="formulario">
-                <input class="error" class="inputTarea" type="text" id="escribirTarea"
-                    placeholder="Añade una nueva tarea">
+                <input class="inputTarea" type="text" id="escribirTarea" placeholder="Añade una nueva tarea">
                 <select name="prioridad" id="escribirPrioridad">
-                    <option value="select">Prioridad</option>
-                    <option value="teCaliente">Té caliente</option>
-                    <option value="teTemplado">Té templado</option>
-                    <option value="teFrio">Té frío</option>
+                    <option value="">Selecciona el nivel de prioridad</option>
+                    <!-- value vacío para poder hacer una alerta -->
+                    <option value="alta">Té caliente</option>
+                    <option value="media">Té templado</option>
+                    <option value="baja">Té frío</option>
                 </select>
                 <input type="button" class="boton" id="btnAgregar" placeholder="Guardar" value="Guardar">
             </form>
         </section>
-        <section id="formInferior">
-            <select name="prioridad" id="prioridad">
-                <option value="select">Buscar por prioridad</option>
-                <option value="teCaliente">Té caliente</option>
-                <option value="teTemplado">Té templado</option>
-                <option value="teFrio">Té frío</option>
-            </select>
-            <input type="search" name="buscar" placeholder="buscar tarea...">
-        </section>
         <section id="listaTareas">
             <ul id="tareasJs">
-                <li><i class="fas fa-mug-hot"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quidem
+                <!-- <li><i class="fas fa-mug-hot"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quidem
                     quae laboriosam rerum dolore,
                     maxime quibusdam vitae asperiores neque est.</li>
-                <li><i class="fas fa-mug-hot"></i>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                <li><i class="fas fa-mug-hot"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                    pariatur, distinctio repellat officiis
-                    obcaecati similique sint minima nam quae quod voluptatum iusto atque reprehenderit libero, maiores
-                    fugit
-                    optio commodi sit corporis, dolore minus? Vel?</li>
-                <li><i class="fas fa-mug-hot"></i>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus,
-                    voluptatum!</li>
-                <li><i class="fas fa-mug-hot"></i>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Necessitatibus nostrum ducimus
-                    perspiciatis
-                    saepe quod, nemo hic tempore, ipsa laboriosam enim nesciunt tenetur incidunt earum sequi animi velit
-                    voluptatibus, odit eveniet dolores numquam?</li>
-            </ul>
+                <li><i class="fas fa-mug-hot" style="color: blue;"></i>Lorem ipsum dolor sit amet consectetur
+                    adipisicing.</li> -->
 
+            </ul>
+        </section>
+        <section id="formInferior">
+            <select id="filtrarPrioridad">
+                <option value="">filtro prioridad</option>
+                <option value="alta">Té caliente</option>
+                <option value="media">Té templado</option>
+                <option value="baja">Té frío</option>
+            </select>
+            <input type="search" name="buscar" placeholder="buscar tarea...">
         </section>
 
 
@@ -103,6 +95,7 @@
     </footer>
     <!-- Footer -->
 
+    <script src="jsArchivos/controlador.js"></script>
     <script src="jsArchivos/carrusel.js"></script>
     <script src="jsArchivos/main.js"></script>
 
