@@ -8,8 +8,7 @@
 
 
 /* el array de abajo es para el archivo main.js */
-let listaDeTareas = new Array();
-listaDeTareas = [
+const listaDeTareas = new Array(
     {
         'id': 1,
         'titulo': 'contestar a los correos electrónicos del trabajo y escribe a Fernando para planificar la semana',
@@ -25,4 +24,7 @@ listaDeTareas = [
         'titulo': 'llamar al seguro para mantenimiento calefacción',
         'prioridad': 'baja'
     }
-]
+);
+
+
+

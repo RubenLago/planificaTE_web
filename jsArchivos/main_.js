@@ -4,18 +4,6 @@ let inputEscribirTarea = document.querySelector('#escribirTarea');
 let btnAgregarTarea = document.querySelector('#btnAgregar');
 
 
-/* 
-btnAgregarTarea.addEventListener('click', () => {
-    if (inputEscribirTarea.value !== "" && btnPrioridad.value !== "") //probar con .value
-        new Tarea = {
-            inputEscribirTarea.value, //con super.
-            btnPrioridad.value,
-        }
-    // Tarea.push(new Tarea) //NO TIENE SENTIDO
-    //NO FUNCIONA
-
-}) */
-
 function pintarTareas(pLista) {
     pLista.forEach(element => pLista[element.titulo].push)
 

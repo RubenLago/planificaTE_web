@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/planificaTE.css">
     <!--   <script src="jsArchivos/claseTarea.js"></script> -->
     <script src="jsArchivos/datos.js"></script>
-    <script src="jsArchivos/controlador.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,9 +41,9 @@
                 <select name="prioridad" id="escribirPrioridad">
                     <option value="">Selecciona el nivel de prioridad</option>
                     <!-- value vacío para poder hacer una alerta -->
-                    <option value="1">Té caliente</option>
-                    <option value="2">Té templado</option>
-                    <option value="3">Té frío</option>
+                    <option value="alta">Té caliente</option>
+                    <option value="media">Té templado</option>
+                    <option value="baja">Té frío</option>
                 </select>
                 <input type="button" class="boton" id="btnAgregar" placeholder="Guardar" value="Guardar">
             </form>
@@ -59,11 +59,11 @@
             </ul>
         </section>
         <section id="formInferior">
-            <select name="prioridad" id="prioridad">
-                <option value="select">filtro prioridad</option>
-                <option value="1">Té caliente</option>
-                <option value="2">Té templado</option>
-                <option value="3">Té frío</option>
+            <select id="prioridad">
+                <option value="">filtro prioridad</option>
+                <option value="alta">Té caliente</option>
+                <option value="media">Té templado</option>
+                <option value="baja">Té frío</option>
             </select>
             <input type="search" name="buscar" placeholder="buscar tarea...">
         </section>
@@ -96,6 +96,7 @@
     </footer>
     <!-- Footer -->
 
+    <script src="jsArchivos/controlador.js"></script>
     <script src="jsArchivos/carrusel.js"></script>
     <script src="jsArchivos/main.js"></script>
 
