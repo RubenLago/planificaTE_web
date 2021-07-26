@@ -1,31 +1,19 @@
-/* variables de los cinco botones dinámicos */
+//capturar botones
 let listaTareasHtml = document.querySelector('#tareasJs'); //ul
 let inputEscribirTarea = document.querySelector('#escribirTarea');
-/* capturar prioridad x hacer */
 let btnAgregarTarea = document.querySelector('#btnAgregar');
 let marcarPrioridad = document.querySelector('#escribirPrioridad')
 
-//Eventos
-
-inputEscribirTarea.addEventListener('click', comprobarTarea);
 
 
 pintarLista(listaDeTareas, listaTareasHtml)
 
-function comprobarTarea() {
-    /* volver al placehoder inicial despues de la alerta..y desactivar el color rojo */
-    inputEscribirTarea.setAttribute("placeholder", "Añade una tarea nueva");
-    inputEscribirTarea.setAttribute('style', 'color: black');
-}
 
-
-
-
-/* btnAgregarTarea.addEventListener('click', agregarTarea); */
+/* rellena los campos input-tareas e select */
 let contadorId = 4;
 btnAgregarTarea.addEventListener('click', () => {
 
-    if (inputEscribirTarea !== "" && marcarPrioridad !== "") {
+    if (inputEscribirTarea.value !== "" && marcarPrioridad.value !== "") {
         let newTarea = {
             id: contadorId,
             titulo: inputEscribirTarea.value,
@@ -35,24 +23,16 @@ btnAgregarTarea.addEventListener('click', () => {
         listaDeTareas.push(newTarea);
         pintarLista(listaDeTareas, listaTareasHtml);
         contadorId++
+        inputEscribirTarea.setAttribute("placeholder", "Añade una tarea");
+        inputEscribirTarea.setAttribute('style', 'color: black');
 
     } else {
-        alert('entra al alert')
+        inputEscribirTarea.setAttribute("placeholder", "DEBES RELLENAR TODOS LOS CAMPOS!!");
+        inputEscribirTarea.setAttribute('style', 'color: red');
     }
     inputEscribirTarea.value = "";
     marcarPrioridad.value = "";
-    //rellena la array pero no pinta, como si un campo estuviera vacío
 })
-
-
-
-
-
-function comprobarTarea() {
-    /* volver al placehoder inicial despues de la alerta..y desactivar el color rojo */
-    /*     inputEscribirTarea.setAttribute("placeholder", "Añade una tarea nueva");
-        inputEscribirTarea.setAttribute('style', 'color: black'); */
-}
 
 
 function eliminarTarea(event) {
@@ -64,5 +44,12 @@ function eliminarTarea(event) {
 }
 for (let index = 0; index < listaTareas.children.length; index++) {
     listaTareas.children[index].addEventListener('click', eliminarTarea)
+}
+
+
+
+//filtrar por prioridad
+let filtroPrioridad = function (pLista, pPrioridad) {
+    let filtrarLista = pLista.filter()
 }
 
