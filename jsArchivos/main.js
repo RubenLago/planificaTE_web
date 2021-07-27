@@ -59,7 +59,9 @@ filtroPrioridad.addEventListener('click', e => {
         filtrarPorPrioridad(listaDeTareas, 'media');
     } else if (e.target.value == 'baja') {
         filtrarPorPrioridad(listaDeTareas, 'baja');
-    } else alert('selecciona una prioridad')
+    } else if (e.target.value == '')
+        alert('Debes seleccionar un filtro');
+
 })
 
 function filtrarPorPrioridad(pLista, pPrioridad) {
@@ -74,6 +76,19 @@ filtroTexto.addEventListener("input", e => {
     let listraFiltradaTexto = listaDeTareas.filter(item => item.titulo.toLowerCase().includes(texto.toLowerCase()));
     pintarLista(listraFiltradaTexto, listaTareasHtml)
 });
+
+//localStorage, clave:valor
+if (localStorage.getItem('titulo') === null) {
+    let tituloLocal = localStorage.setItem('titulo', JSON.stringify(listaDeTareas))
+} else {
+    tituloLocal = JSON.parse(localStorage.getItem('titulo'))
+}
+
+localStorage.setItem('titulo', JSON.stringify(listaDeTareas));
+pSeccion.innerHTML = tituloLocal.length;
+
+
+
 
 
 
