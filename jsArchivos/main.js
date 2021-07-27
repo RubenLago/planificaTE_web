@@ -49,13 +49,6 @@ for (let index = 0; index < listaTareas.children.length; index++) {
 
 
 //filtrar por prioridad
-/* let filtroPrioridad = document.querySelector('#filtrarPrioridad')
-filtroPrioridad.addEventListener('click', () => {
-    let filtroAlta = listaDeTareas.filter(item => item.prioridad == 'alta');
-    new Array(filtroAlta);
-    pintarLista(filtroAlta, listaTareasHtml);
-
-}) */
 let filtroPrioridad = document.querySelector('#filtrarPrioridad')
 
 filtroPrioridad.addEventListener('click', e => {
@@ -76,9 +69,11 @@ function filtrarPorPrioridad(pLista, pPrioridad) {
 
 
 //filtrar texto
-/* function filtrarTexto(event) {
-    let leerTexto = event.target.value;
+filtroTexto.addEventListener("input", e => {
+    let texto = e.target.value;
+    let listraFiltradaTexto = listaDeTareas.filter(item => item.titulo.toLowerCase().includes(texto.toLowerCase()));
+    pintarLista(listraFiltradaTexto, listaTareasHtml)
+});
 
-} */
 
 
