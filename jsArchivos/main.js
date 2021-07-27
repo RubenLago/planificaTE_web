@@ -2,8 +2,8 @@
 let listaTareasHtml = document.querySelector('#tareasJs'); //ul
 let inputEscribirTarea = document.querySelector('#escribirTarea');
 let btnAgregarTarea = document.querySelector('#btnAgregar');
-let marcarPrioridad = document.querySelector('#escribirPrioridad')
-
+let marcarPrioridad = document.querySelector('#escribirPrioridad');
+let filtroTexto = document.querySelector('#filtroText');
 
 
 pintarLista(listaDeTareas, listaTareasHtml)
@@ -40,7 +40,6 @@ function eliminarTarea(event) {
     alert("¿Quieres borrar: " + " '" + valorTarea + "' " + "?")
     event.target.parentNode.removeChild(event.target);
     console.log(event.target.dataset.id);
-
 }
 for (let index = 0; index < listaTareas.children.length; index++) {
     listaTareas.children[index].addEventListener('click', eliminarTarea)
@@ -48,8 +47,38 @@ for (let index = 0; index < listaTareas.children.length; index++) {
 
 
 
+
 //filtrar por prioridad
-let filtroPrioridad = function (pLista, pPrioridad) {
-    let filtrarLista = pLista.filter()
+/* let filtroPrioridad = document.querySelector('#filtrarPrioridad')
+filtroPrioridad.addEventListener('click', () => {
+    let filtroAlta = listaDeTareas.filter(item => item.prioridad == 'alta');
+    new Array(filtroAlta);
+    pintarLista(filtroAlta, listaTareasHtml);
+
+}) */
+let filtroPrioridad = document.querySelector('#filtrarPrioridad')
+
+filtroPrioridad.addEventListener('click', e => {
+
+    if (e.target.value == 'alta') {
+        filtrarPorPrioridad(listaDeTareas, 'alta');
+    } else if (e.target.value == 'media') {
+        filtrarPorPrioridad(listaDeTareas, 'media');
+    } else if (e.target.value == 'baja') {
+        filtrarPorPrioridad(listaDeTareas, 'baja');
+    } else alert('selecciona una prioridad')
+})
+
+function filtrarPorPrioridad(pLista, pPrioridad) {
+    let listraFiltradaPrio = pLista.filter(item => item.prioridad == pPrioridad);
+    pintarLista(listraFiltradaPrio, listaTareasHtml)
 }
+
+
+//filtrar texto
+/* function filtrarTexto(event) {
+    let leerTexto = event.target.value;
+
+} */
+
 
